@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Advice generator app</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@200;400;500;600&family=Raleway:wght@400;700&family=Manrope:wght@800&display=swap");
+
+      body {
+        background-color: hsl(217, 19%, 24%);
+        font-family: Manrope, sans-serif;
+        color: hsl(193, 38%, 86%);
+      }
+      main {
+        border-radius: 10px;
+        background: hsl(217, 19%, 38%);
+        width: 90%;
+        max-width: 350px;
+        margin: 50px auto;
+        padding: 8px 10px;
+        position: relative;
+      }
+      header {
+        color: hsl(150, 100%, 66%);
+        font-weight: 800;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        text-align: center;
+      }
+      header h3 {
+        display: inline-block;
+      }
+      p {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 800;
+        color: hsl(193, 38%, 86%);
+      }
+      img.divider {
+        width: 100%;
+        margin: 5px auto 45px auto;
+      }
+
+      #dice {
+        border-radius: 100%;
+        background-color: hsl(150, 100%, 66%);
+        cursor: pointer;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        position: absolute;
+        bottom: -30px;
+        left: 150px;
+      }
+      #dice:hover {
+        box-shadow: 1px 1px 20px hsl(150, 100%, 66%),
+          -1px -1px 20px hsl(150, 100%, 66%);
+      }
+      .attribution {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        left: 200px;
+        font-size: 1.5rem;
+      }
+      .attribution a {
+        color: hsl(150, 100%, 66%);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h3>ADVICE</h3>
+        <!-- Advice ID goes here -->
+        <span id="advice-id"> #001</span>
+      </header>
+      <p id="advice-text">Click on the dice to get a random advice</p>
+      <img src="./images/pattern-divider-mobile.svg" class="divider" alt="" />
+
+      <div id="dice">
+        <img src="./images/icon-dice.svg" alt="" />
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >
+      <br />
+      Coded by <a href="https://github.om/JustShuaib">Adeoti Shuaib</a>
+    </div>
+    <script src="./advice.js"></script>
+  </body>
+</html>
