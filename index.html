@@ -13,19 +13,22 @@
     <title>Frontend Mentor | Advice generator app</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@200;400;500;600&family=Raleway:wght@400;700&family=Manrope:wght@800&display=swap");
-
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
       body {
         font-family: Manrope, sans-serif;
-        background-color: hsl(217, 19%, 24%);
+        background-color: hsl(217.9, 23.5%, 15.9%);
       }
-
       main {
         padding: 8px 10px;
         position: relative;
         width: 70%;
         max-width: 400px;
         border-radius: 10px;
-        background: hsl(217, 19%, 38%);
+        background-color: hsl(217, 19%, 24%);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -35,36 +38,36 @@
       }
       h3 {
         color: hsl(150, 100%, 66%);
-        font-weight: 800;
-        font-size: 16px;
-        letter-spacing: 1.5px;
+        letter-spacing: 3.5px;
         text-align: center;
+        font-size: 0.8rem;
+        padding: 1.5rem 0 1rem 0;
       }
       p {
         text-align: center;
-        font-size: 28px;
+        font-size: 1.75rem;
         font-weight: 800;
         color: hsl(193, 38%, 86%);
       }
-      img.divider {
+      .divider {
+        margin: 2rem 0;
         width: 100%;
-        margin: 5px auto 45px auto;
       }
-
-      #dice {
+      .dice {
         border-radius: 100%;
         background-color: hsl(150, 100%, 66%);
         cursor: pointer;
-        width: 30px;
+        width: 3rem;
+        height: 3rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px;
         position: absolute;
-        bottom: -30px;
-        left: 150px;
+        bottom: -1.5rem;
+        left: calc(50% - 1.5rem);
+        transition: 0.3s;
       }
-      #dice:hover {
+      .dice:hover {
         box-shadow: 1px 1px 20px hsl(150, 100%, 66%),
           -1px -1px 20px hsl(150, 100%, 66%);
       }
@@ -74,10 +77,19 @@
     <main>
       <h3>ADVICE <span id="advice-id"> #001</span></h3>
       <p id="advice-text">Click on the dice to get a random advice</p>
-      <img src="./images/pattern-divider-mobile.svg" class="divider" alt="" />
-
-      <div id="dice">
-        <img src="./images/icon-dice.svg" alt="" />
+      <picture>
+        <source
+          srcset="/images/pattern-divider-desktop.svg"
+          media="(min-width: 500px)"
+        />
+        <img
+          src="/images/pattern-divider-mobile.svg"
+          class="divider"
+          alt="divider"
+        />
+      </picture>
+      <div class="dice" id="dice">
+        <img src="./images/icon-dice.svg" alt="dice" />
       </div>
     </main>
     <script src="./advice.js"></script>
