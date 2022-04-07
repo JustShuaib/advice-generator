@@ -15,28 +15,30 @@
       @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@200;400;500;600&family=Raleway:wght@400;700&family=Manrope:wght@800&display=swap");
 
       body {
-        background-color: hsl(217, 19%, 24%);
         font-family: Manrope, sans-serif;
-        color: hsl(193, 38%, 86%);
+        background-color: hsl(217, 19%, 24%);
       }
+
       main {
-        border-radius: 10px;
-        background: hsl(217, 19%, 38%);
-        width: 90%;
-        max-width: 350px;
-        margin: 50px auto;
         padding: 8px 10px;
         position: relative;
+        width: 70%;
+        max-width: 400px;
+        border-radius: 10px;
+        background: hsl(217, 19%, 38%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
       }
-      header {
+      h3 {
         color: hsl(150, 100%, 66%);
         font-weight: 800;
         font-size: 16px;
         letter-spacing: 1.5px;
         text-align: center;
-      }
-      header h3 {
-        display: inline-block;
       }
       p {
         text-align: center;
@@ -66,26 +68,11 @@
         box-shadow: 1px 1px 20px hsl(150, 100%, 66%),
           -1px -1px 20px hsl(150, 100%, 66%);
       }
-      .attribution {
-        position: absolute;
-        text-align: center;
-        bottom: 0;
-        left: 200px;
-        font-size: 1.5rem;
-      }
-      .attribution a {
-        color: hsl(150, 100%, 66%);
-        text-decoration: none;
-      }
     </style>
   </head>
   <body>
     <main>
-      <header>
-        <h3>ADVICE</h3>
-        <!-- Advice ID goes here -->
-        <span id="advice-id"> #001</span>
-      </header>
+      <h3>ADVICE <span id="advice-id"> #001</span></h3>
       <p id="advice-text">Click on the dice to get a random advice</p>
       <img src="./images/pattern-divider-mobile.svg" class="divider" alt="" />
 
@@ -93,14 +80,6 @@
         <img src="./images/icon-dice.svg" alt="" />
       </div>
     </main>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >
-      <br />
-      Coded by <a href="https://github.om/JustShuaib">Adeoti Shuaib</a>
-    </div>
     <script src="./advice.js"></script>
   </body>
 </html>
