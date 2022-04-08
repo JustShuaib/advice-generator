@@ -18,7 +18,7 @@ function displayAdvice() {
         throw new Error("Failed to fetch advice 😔");
       }
     } catch (error) {
-      adviceText.innerText = "Failed to fetch advice 😔";
+      adviceText.innerText = error.name + ": Failed to fetch advice 😔";
     }
   }
   getAdvice();
