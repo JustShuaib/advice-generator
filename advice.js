@@ -3,13 +3,14 @@ const adviceId = document.getElementById("advice-id");
 const adviceText = document.getElementById("advice-text");
 
 dice.addEventListener("click", function () {
-  async function adv() {
-    const advObj = await fetch("https://api.adviceslip.com/advice");
-    const realAdv = await advObj.json();
-    const { advice, id } = realAdv.slip;
-
+  async function getAdvice() {
+    const adviceObject = await fetch("https://api.adviceslip.com/advice");
+    const realAdvice = await adviceObject.json();
+    const { advice, id } = realAdvice.slip;
+    adviceText.classList.add("animate");
     adviceText.innerText = `"${advice}"`;
     adviceId.innerText = `#${id}`;
   }
-  adv();
+  getAdvice();
+  adviceText.classList.remove("animate");
 });
