@@ -7,9 +7,10 @@ dice.addEventListener("click", function () {
     const advObj = await fetch("https://api.adviceslip.com/advice");
     const realAdv = await advObj.json();
     const { advice, id } = realAdv.slip;
-
+    adviceText.classList.add("animate");
     adviceText.innerText = `"${advice}"`;
     adviceId.innerText = `#${id}`;
   }
   adv();
+  adviceText.classList.remove("animate");
 });
