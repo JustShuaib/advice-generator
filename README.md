@@ -22,12 +22,10 @@ Users should be able to:
 ## Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- CSS
 - Mobile-first workflow
 - JavaScript
-- API
+- [Advice slip API](https://api.adviceslip.com/)
 
 ## Continued development
 
